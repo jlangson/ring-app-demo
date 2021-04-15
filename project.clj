@@ -8,9 +8,4 @@
   :repl-options {:init-ns ring-app.core}
   :main ring-app.core)
 
-(defn handler [request-map]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (str "<html><body> your IP is: "
-           (:remote-add request-map)
-           "</body></html>")})
+
