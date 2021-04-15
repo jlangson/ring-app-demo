@@ -1,6 +1,6 @@
 (ns ring-app.core-test
   (:require [clojure.test :refer :all]
-            [ring-app.core :refer :all]))
+            [ring-app.core2 :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
