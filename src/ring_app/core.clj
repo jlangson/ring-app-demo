@@ -1,6 +1,6 @@
 (ns ring-app.core
   (:require
-    [reitit.ring as reitit]
+    [reitit.ring :as reitit]
     [muuntaja.middleware :as muuntaja]
     [ring.adapter.jetty :as jetty]
     [ring.util.http-response :as response]
