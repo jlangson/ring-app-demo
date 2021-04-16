@@ -44,7 +44,16 @@
 
 (def handler
   (reitit/ring-handler
-    (reitit/router routes)))
+    (reitit/router routes)
+    (reitit/routes
+      (reitit/create-resource-handler {:path "/"})
+      (reitit/create-default-handler
+        {:not-found
+         (constantly (response/not-found "404 - page not found"))
+         :method-not-allowed
+         (constantly (response/method-not-allowed "405 - Not Allowed"))
+         :not-acceptable
+         (constantly (response/not-acceptable "406 - Not acceptable"))}))))
 
 ;(defn test-repl
 ;  []
