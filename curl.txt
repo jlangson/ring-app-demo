@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST http://localhost:3000/api/multiply -d '{"a": 3, "b": 2}'
